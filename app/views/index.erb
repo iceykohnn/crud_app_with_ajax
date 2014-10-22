@@ -1,0 +1,19 @@
+
+  <h1>Welcome to Events_for_all!</h1>
+  <p>Enjoy your stay!</p>
+
+  
+<h3>Create a new Event!</h3>
+<form action="/events" method="post">
+  <input type="text" name="event[name]" placeholder="Name">
+  <input type="text" name="event[location]" placeholder="Location">
+  <input type="text" name="event[starts_at]" placeholder="Starts at:">
+  <input type="text" name="event[ends_at]" placeholder="Ends at:">  
+  <input type="submit" value="Submit!">
+</form>
+
+  <ul>
+    <% @events.each do |event| %>
+      <li><a href="/event/<%= event.id %>"><%= event.name %></a></li>  
+    <% end %>
+  </ul>

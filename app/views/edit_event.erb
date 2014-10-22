@@ -1,0 +1,12 @@
+<h3>Edit your Event!</h3>
+<form action="/event/<%= @event.id %>" method="post">
+  <input type="text" name="event[name]" placeholder="Name" value="<%= @event.name %>">
+  <input type="text" name="event[location]" placeholder="Location" value="<%= @event.location %>">
+  <input type="text" name="event[starts_at]" placeholder="Starts at:" value="<%= @event.starts_at %>">
+  <input type="text" name="event[ends_at]" placeholder="Ends at:" value="<%= @event.ends_at %>">
+  <input type="submit" value="Edit!">
+</form>
+
+<form action="/event/<%= @event.id %>/delete" method="post">
+	<input type="submit" value="Delete this Event!">
+</form>
